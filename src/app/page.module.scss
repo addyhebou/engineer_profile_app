@@ -1,0 +1,91 @@
+.page {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15vh 0;
+  .main {
+    display: flex;
+    // border: 2px solid red;
+    justify-content: center;
+    flex-direction: column;
+    // width: 80vw;
+  }
+  h1,
+  h2,
+  h3 {
+    color: rgba(218, 218, 218, 0.55);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', system-ui,
+      sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin: 20px auto;
+    animation: fadeInUp 0.7s ease-out;
+    span {
+      color: white;
+    }
+    text-align: center;
+    width: 70vw;
+    max-width: 800px;
+  }
+
+  * {
+    animation: fadeInUp 0.7s ease-out;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(0.75rem, 8vw, 1.25rem);
+    color: white;
+    font-weight: 800;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 0.7s ease-out;
+    animation-delay: 0.37s;
+    animation-fill-mode: both;
+    width: clamp(300px, 50vw, 500px);
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .profileImageContainer {
+    animation: fadeInUp 0.7s ease-out;
+    animation-delay: 0.54s;
+    animation-fill-mode: both;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent -20%,
+        transparent -20%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      pointer-events: none;
+    }
+  }
+}
