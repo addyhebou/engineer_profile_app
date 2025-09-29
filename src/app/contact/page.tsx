@@ -1,20 +1,18 @@
 'use client';
 import Image from 'next/image';
-import styles from './page.module.scss';
+import styles from '../page.module.scss';
 
-export default function Home() {
+export default function Contact() {
   return (
     <div className={styles.page}>
       <div className={styles.content}>
-        <div></div>
-
+        <nav>{/* ...existing nav code... */}</nav>
         <main className={styles.main}>
           <div className={styles.homePageBanner}>
             <h1>Addy Hebou</h1>
             <h3>software engineer, front end & app developer.</h3>
           </div>
         </main>
-
         <div className={styles.asFeaturedInBlock}>
           <h3>As featured in</h3>
           <div className={styles.featuredInLogos}>
