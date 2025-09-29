@@ -4,11 +4,19 @@ import styles from './work.module.scss';
 import { Job, JOBS, PORTFOLIO_PROJECTS, PortfolioProject } from '../constants';
 import SkillTag from '../components/SkillTag';
 import { useState } from 'react';
-import PortfolioCover from '../../../public/portfolio_project_photos/red_cover.svg';
+import RedPortfolioCover from '../../../public/portfolio_project_photos/red_cover.svg';
+import BluePortfolioCover from '../../../public/portfolio_project_photos/blue_cover.svg';
+import OceanPortfolioCover from '../../../public/portfolio_project_photos/ocean_cover.svg';
 import Link from 'next/link';
 
 export default function Work() {
   function ProjectCard({ project }: { project: PortfolioProject }) {
+    const PortfolioCover =
+      project.cover === 'red'
+        ? RedPortfolioCover
+        : project.cover === 'blue'
+        ? BluePortfolioCover
+        : OceanPortfolioCover;
     return (
       <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer">
         <div className={styles.projectCard}>

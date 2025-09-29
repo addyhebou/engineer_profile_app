@@ -61,6 +61,7 @@ export interface PortfolioProject {
   imageUrl: string;
   projectUrl: string;
   skills: string[];
+  cover: 'red' | 'blue' | 'ocean';
 }
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
@@ -71,6 +72,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     imageUrl: '/portfolio_project_photos/villa_app_screenshot.svg',
     projectUrl: 'https://villa-kappa.vercel.app/',
     skills: ['Next.js', 'Firebase', 'TypeScript', 'CSS/SASS'],
+    cover: 'red',
   },
   {
     name: 'Champagne Therapy Site',
@@ -79,6 +81,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     imageUrl: '/portfolio_project_photos/villa_app_screenshot.svg',
     projectUrl: 'https://champagne-frontend.vercel.app/',
     skills: ['Next.js', 'Firebase', 'TypeScript', 'CSS/SASS'],
+    cover: 'blue',
   },
   {
     name: 'Saint Steph Official Site',
@@ -87,5 +90,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     imageUrl: '/portfolio_project_photos/villa_app_screenshot.svg',
     projectUrl: 'http://saintstephmusic.com',
     skills: ['Next.js', 'Firebase', 'TypeScript', 'CSS/SASS'],
+    cover: 'ocean',
   },
 ];
