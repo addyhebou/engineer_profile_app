@@ -1,0 +1,21 @@
+.skillTag {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+}
+.primary {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--portfolioBlue);
+}
+
+.secondary {
+  background-color: #f7f7f7;
+  color: #2e8985;
+  font-weight: bold;
+}

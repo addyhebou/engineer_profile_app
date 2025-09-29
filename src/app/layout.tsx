@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import styles from './page.module.scss';
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,11 +28,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} `}>
         <Script
           src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=STz2cm"
           strategy="afterInteractive"
         />
+        <nav>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
+              <Link href="/">// home</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/experience">// experience</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/work">// work</Link>
+            </li>
+            {/* <li className={styles.navItem}>
+              <Link href="/contact">// contact</Link>
+            </li> */}
+          </ul>
+        </nav>
         {children}
       </body>
     </html>

@@ -127,9 +127,32 @@ body {
 }
 
 body {
+  /* width: 50vw; */
+  height: 100vh;
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url('/cube_wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -159,4 +182,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+:root {
+  --portfolioBlue: #7cd8d4;
 }
