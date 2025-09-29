@@ -36,17 +36,14 @@ export default function RootLayout({
         <nav>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="/">// home</Link>
+              <Link href="/">home</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/experience">// experience</Link>
+              <Link href="/experience">experience</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/work">// work</Link>
+              <Link href="/work">work</Link>
             </li>
-            {/* <li className={styles.navItem}>
-              <Link href="/contact">// contact</Link>
-            </li> */}
           </ul>
         </nav>
         {children}

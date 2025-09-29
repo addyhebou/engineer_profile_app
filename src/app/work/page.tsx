@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
 import styles from './work.module.scss';
-import { Job, JOBS, PORTFOLIO_PROJECTS, PortfolioProject } from '../constants';
+import { PORTFOLIO_PROJECTS, PortfolioProject } from '../constants';
 import SkillTag from '../components/SkillTag';
-import { useState } from 'react';
 import RedPortfolioCover from '../../../public/portfolio_project_photos/red_cover.svg';
 import BluePortfolioCover from '../../../public/portfolio_project_photos/blue_cover.svg';
 import OceanPortfolioCover from '../../../public/portfolio_project_photos/ocean_cover.svg';
